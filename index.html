@@ -8,6 +8,49 @@
 
 /* Original Word floral artwork, kept clear of report text. */
 .decoration.floral{width:45mm;height:45mm;left:3mm;bottom:13mm}.report-footer img{width:30mm;height:23mm;left:48mm;bottom:0}.decoration.dots{opacity:1}
+
+/* Positions and sizes read from the original DOCX (EMU and twips converted to mm). */
+.page{border:0;padding:0;isolation:isolate;font-family:Arial,Tahoma,sans-serif}
+.page:before{content:'';position:absolute;inset:8.47mm;border:3px ridge #bfbfbf;z-index:4;pointer-events:none}
+.report-head{position:absolute;inset:0;height:auto;display:block}
+.school{position:absolute;left:151.7mm;top:11.7mm;width:56.3mm;height:32.35mm;text-align:center;font-family:Arial,sans-serif;font-size:10pt;font-weight:400;line-height:1.15}
+.logo{position:absolute;left:12.53mm;top:13.63mm;width:29.85mm;height:17.11mm}
+.corner{position:absolute;opacity:1;object-fit:fill;z-index:0}
+.corner.left{left:9.36mm;right:auto;top:10.16mm;width:71.92mm;height:71.92mm}
+.corner.right{left:72.99mm;right:auto;top:10.16mm;width:127mm;height:127mm}
+.report-title{position:absolute;left:60.61mm;top:35.03mm;width:73.31mm;height:23.02mm;margin:0;display:flex;align-items:center;justify-content:center;border-radius:5mm;background:linear-gradient(#ffe694,#ffd966 45%,#e9b937);box-shadow:inset 0 1mm 1.5mm #fff7,inset 0 -1mm 1.5mm #9a700044;color:#595959;font-family:'Mishafi Gold','Traditional Arabic','Times New Roman',serif;font-weight:bold;font-size:36pt;line-height:1;z-index:2}
+.report-title:after{display:none}
+.body-content{position:absolute;left:11.75mm;top:58.4mm;width:169.84mm;height:185mm;z-index:2;overflow:hidden}
+.report-table{font-family:Arial,sans-serif;font-size:11pt;line-height:1.15;table-layout:fixed;border-collapse:collapse;width:100%}
+.report-table td{border:.5pt solid #000;padding:1.2mm 1.9mm 3.5mm;vertical-align:top;color:#000;white-space:pre-wrap;font-weight:400;overflow-wrap:anywhere}
+.report-table strong,.report-table .field-label{color:#f00;font-weight:400}
+.report-table .field-label{text-align:center}
+.report-table .field-value{text-align:center;font-weight:bold}
+.program-row td{font-size:14pt;min-height:8mm;padding-bottom:3.5mm}
+.goal-row td{height:8mm}.details-row td{height:12mm;padding-bottom:5.3mm}
+.domain-row td{height:16.78mm;padding-bottom:3mm;vertical-align:middle}
+.domain-row td:nth-child(2){font-size:9pt;font-weight:bold;text-align:right;line-height:1.35}
+.domain-row td:nth-child(3){font-weight:bold}
+.date-row td,.audience-row td{height:9mm;vertical-align:middle;padding:1mm 1.2mm 2.5mm}
+.indicator-row td{height:8.26mm;vertical-align:middle;padding:1mm 1.2mm 2mm}
+.documentation-row td{height:96.7mm;padding:2mm;background:#fff}
+.documentation-row .doc-text{font-size:11pt;line-height:1.3;white-space:pre-wrap}
+.decoration{position:absolute;z-index:1;object-fit:fill;opacity:1}
+.decoration.floral{left:34.07mm;top:22.43mm;bottom:auto;right:auto;width:43.08mm;height:43.08mm;z-index:3}
+.decoration.dots{left:55.42mm;top:246mm;bottom:auto;right:auto;width:31.34mm;height:31.34mm}
+.decoration.sprig{left:139.39mm;top:230.5mm;bottom:auto;width:75.05mm;height:75.05mm;z-index:3}
+.decoration.organic{left:81mm;top:205.6mm;width:127mm;height:127mm;z-index:0}
+.side-rail{position:absolute;background:#a5a5a5;z-index:1;border-radius:2mm}
+.rail-one{left:184.95mm;top:43.85mm;width:6.35mm;height:186.53mm}
+.rail-two{left:194.08mm;top:54.37mm;width:2.78mm;height:186.53mm}
+.author-banner{position:absolute;left:74.55mm;top:255.31mm;width:74.55mm;min-height:11.88mm;background:#fff;border:1pt solid #70ad47;border-radius:3mm;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;padding:1mm 2mm;font:11pt Arial;z-index:3}
+.author-value{font-weight:bold;margin-right:1mm;overflow-wrap:anywhere;max-width:100%}
+.report-footer{position:absolute;inset:0;font-family:Arial;font-size:10pt;display:block;pointer-events:none;z-index:3}
+.principal-banner{position:absolute;left:70.66mm;top:269.5mm;width:66.56mm;height:16.4mm;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:4mm;background:linear-gradient(#ffe694,#ffd966 45%,#e9b937);box-shadow:inset 0 1mm 1.5mm #fff7,inset 0 -1mm 1.5mm #9a700044;color:#595959;font-family:'Mishafi Gold','Traditional Arabic','Times New Roman',serif;font-size:21pt;line-height:1}
+.report-footer .number{position:absolute;left:13mm;bottom:9mm;font-size:9pt}
+.photo-grid{gap:3mm;margin-top:2mm}.photo-grid figure{padding:1mm}.photo-grid img{height:36mm}.photo-grid figcaption{font-size:9pt;line-height:1.2}.doc-heading{font-size:13pt;margin:0 0 3mm}
+@media print{.page{border:0!important;width:210mm!important;height:297mm!important;zoom:1!important}.page:before,.report-title,.author-banner,.principal-banner,.side-rail,.decoration,.corner{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+.rail-two{background:#ffd966}
 </style></head>
 <body>
 <header class="app-head"><div class="brand">تـوثـيـق <span>الابتدائية الثانية بالقاعدة الجوية</span></div><span class="badge">مساحة إعداد التقارير</span></header>
@@ -31,38 +74,39 @@ let photos=[], timer;
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
 domains.forEach((name,i)=>{const l=el('label'),c=el('input');c.type='checkbox';c.name='domain';c.value=name;c.id='domain-'+i;l.append(c,document.createTextNode(' '+name));document.querySelector('#domains').append(l);});
 function values(){const d={};fields.forEach(k=>d[k]=form.elements[k].value);d.domains=[...form.querySelectorAll('[name=domain]:checked')].map(n=>n.value);return d;}
-function makePage(){const p=el('article','page');
- for(const [side,file] of [['right','image6.png'],['left','image4.png']]){const img=el('img','corner '+side);img.src=embeddedImages[file];img.alt='';p.append(img);}
- for(const [cls,file] of [['floral','image1.png'],['dots','image8.png']]){const decor=el('img','decoration '+cls);decor.src=embeddedImages[file];decor.alt='';p.append(decor);}
+function makePage(){
+ const p=el('article','page');
+ for(const [cls,file] of [['corner left','image4.png'],['corner right','image6.png'],['decoration floral','image1.png'],['decoration dots','image8.png'],['decoration sprig','image10.png'],['decoration organic','image12.png']]){const img=el('img',cls);img.src=embeddedImages[file];img.alt='';p.append(img);}
+ p.append(el('div','side-rail rail-one'),el('div','side-rail rail-two'));
  const h=el('header','report-head'),school=el('div','school');['المملكة العربية السعودية','وزارة التعليم (٢٨٠)','الإدارة العامة للتعليم بالطائف','مكتب شمال الطائف','الابتدائية الثانية بالقاعدة الجوية'].forEach(t=>school.append(el('div','',t)));
  const logo=el('img','logo');logo.src=embeddedImages['image3.png'];logo.alt='وزارة التعليم ورؤية 2030';h.append(school,logo);p.append(h,el('h2','report-title','توثيق برنامج'));
- const body=el('div','body-content');p.append(body);const footer=el('footer','report-footer');const flower=el('img');flower.src=embeddedImages['image10.png'];flower.alt='';footer.append(el('span','','مديرة المدرسة: أ/ سميرة العصيمي'),flower,el('span','number'));p.append(footer);pages.append(p);return body;}
-function render(){const d=values();pages.replaceChildren();let body=makePage(),table;
+ const body=el('div','body-content');p.append(body);
+ const author=el('div','author-banner');author.append(el('span','','معدة التقرير المعلمة : '),el('span','author-value',values().author));p.append(author);
+ const footer=el('footer','report-footer');footer.append(el('span','principal-banner','مديرة المدرسة : أ/ سميرة العصيمي'),el('span','number'));p.append(footer);pages.append(p);return body;
+}
+function render(){
+ const d=values();pages.replaceChildren();let body=makePage(),table;
  const fits=()=>body.scrollHeight<=body.clientHeight+1;
  const next=()=>{body=makePage();table=null;};
- function rowNode(label,text,small){const tr=el('tr'),td=el('td',small?'domain-cell':'');td.colSpan=4;td.append(el('strong','',label+' '),document.createTextNode(text||'—'));tr.append(td);return tr;}
- function putRow(label,text,small){
-  let remaining=text||'—',continued=false;
-  while(remaining){if(!table){table=el('table','report-table');body.append(table);}const row=rowNode(label+(continued?' (تابع)':''),remaining,small);table.append(row);
-   if(fits())break;
-   row.remove();
-   // Find the largest text segment that fits without clipping long reports.
-   let lo=0,hi=remaining.length,best=0;
-   while(lo<=hi){const mid=Math.floor((lo+hi)/2),probe=rowNode(label+(continued?' (تابع)':''),remaining.slice(0,mid),small);table.append(probe);const ok=fits();probe.remove();if(ok){best=mid;lo=mid+1;}else hi=mid-1;}
-   if(best<30&&table.rows.length){next();continue;}
-   if(best===0){status.textContent='تعذر توزيع بعض النصوص؛ قللي الأسطر الفارغة.';break;}
-   let cut=best;if(best<remaining.length){const space=remaining.lastIndexOf(' ',best);if(space>best*.7)cut=space;}
-   table.append(rowNode(label+(continued?' (تابع)':''),remaining.slice(0,cut),small));remaining=remaining.slice(cut).trimStart();continued=true;if(remaining)next();
+ function ensureTable(){if(!table){table=el('table','report-table');const cg=el('colgroup');[1421,3544,1984,2680].forEach(w=>{const c=el('col');c.style.width=(w/9629*100)+'%';cg.append(c);});table.append(cg);body.append(table);}}
+ function rowNode(label,text){const tr=el('tr'),td=el('td');td.colSpan=4;td.append(el('strong','',label+' '),document.createTextNode(text||''));tr.append(td);return tr;}
+ function putRow(label,text,cls){let remaining=text||' ',continued=false;while(remaining){ensureTable();const row=rowNode(label+(continued?' (تابع)':''),remaining);if(cls)row.className=cls;table.append(row);if(fits())break;row.remove();let lo=0,hi=remaining.length,best=0;while(lo<=hi){const mid=Math.floor((lo+hi)/2),probe=rowNode(label,remaining.slice(0,mid));table.append(probe);const ok=fits();probe.remove();if(ok){best=mid;lo=mid+1;}else hi=mid-1;}if(best<30&&table.rows.length){next();continue;}if(!best)break;let cut=best;const space=remaining.lastIndexOf(' ',best);if(space>best*.7)cut=space;table.append(rowNode(label+(continued?' (تابع)':''),remaining.slice(0,cut)));remaining=remaining.slice(cut).trimStart();continued=true;if(remaining)next();}}
+ function fourCells(items,cls){ensureTable();const row=el('tr',cls);items.forEach((s,i)=>{const td=el('td',i%2===0?'field-label':'field-value',s||'');row.append(td);});table.append(row);if(!fits()){row.remove();next();ensureTable();table.append(row);}}
+ putRow('اسم البرنامج :',d.program,'program-row');putRow('الهدف العام :',d.goal,'goal-row');putRow('الهدف التفصيلي :',d.details,'details-row');
+ fourCells(['المجال :',domains.map(x=>(d.domains.includes(x)?'☑ ':'☐ ')+x).join('\n'),'آلية وإجراءات التنفيذ',d.steps],'domain-row');
+ fourCells(['تاريخ التنفيذ',d.date,'مدة التنفيذ',d.duration],'date-row');fourCells(['الفئة المستهدفة',d.audience,'عدد المستهدفين',d.count],'audience-row');
+ ensureTable();const indicator=el('tr','indicator-row'),lab=el('td','field-label','مؤشر تحقق الهدف :'),val=el('td','field-value',d.indicator);val.colSpan=3;indicator.append(lab,val);table.append(indicator);if(!fits()){indicator.remove();putRow('مؤشر تحقق الهدف :',d.indicator);}
+ ensureTable();const docRow=el('tr','documentation-row'),docCell=el('td');docCell.colSpan=4;docRow.append(docCell);table.append(docRow);const docText=el('div','doc-text',d.documentation);docCell.append(docText);
+ if(!fits()&&d.documentation){docRow.remove();putRow('التوثيق :',d.documentation);ensureTable();const r=el('tr','documentation-row'),c=el('td');c.colSpan=4;r.append(c);table.append(r);}
+ if(photos.length){
+  let grid=el('div','photo-grid');docCell.append(grid);
+  for(let i=0;i<photos.length;i++){
+   const photo=photos[i],figure=el('figure'),img=el('img');img.src=photo.src;img.alt=photo.caption||'صورة توثيق '+(i+1);figure.append(img,el('figcaption','',photo.caption||''));grid.append(figure);
+   if(!fits()||!docRow.isConnected){figure.remove();if(!docRow.isConnected||grid.children.length===0){next();body.append(el('h3','doc-heading','صور توثيق البرنامج'));grid=el('div','photo-grid');body.append(grid);}else{next();body.append(el('h3','doc-heading','صور توثيق البرنامج — تابع'));grid=el('div','photo-grid');body.append(grid);}grid.append(figure);}
   }
  }
- putRow('اسم البرنامج:',d.program);putRow('الهدف العام:',d.goal);putRow('الهدف التفصيلي:',d.details);
- putRow('المجال:',domains.map(x=>(d.domains.includes(x)?'☑ ':'☐ ')+x).join('     '),true);putRow('آلية وإجراءات التنفيذ:',d.steps);
- // Preserve the template's four-column date / duration and audience / count rows.
- function pair(a,b,c,e){if(!table){table=el('table','report-table');body.append(table);}const row=el('tr');[a,b||'—',c,e||'—'].forEach((s,i)=>{const td=el('td','',s);if(i%2===0)td.style.fontWeight='bold';row.append(td);});table.append(row);if(!fits()){row.remove();next();table=el('table','report-table');body.append(table);table.append(row);if(!fits()){row.remove();putRow(a,b);putRow(c,e);}}}
- pair('تاريخ التنفيذ',d.date,'مدة التنفيذ',d.duration);pair('الفئة المستهدفة',d.audience,'عدد المستهدفين',d.count);putRow('مؤشر تحقق الهدف:',d.indicator);putRow('معدّة التقرير المعلمة:',d.author);
- if(d.documentation)putRow('التوثيق:',d.documentation);
- if(photos.length){next();body.append(el('h3','doc-heading','صور توثيق البرنامج'));let grid=el('div','photo-grid');body.append(grid);photos.forEach((photo,i)=>{const figure=el('figure'),img=el('img');img.src=photo.src;img.alt=photo.caption||'صورة توثيق '+(i+1);figure.append(img,el('figcaption','',photo.caption||'صورة '+(i+1)));grid.append(figure);if(!fits()){figure.remove();next();body.append(el('h3','doc-heading','صور توثيق البرنامج — تابع'));grid=el('div','photo-grid');body.append(grid);grid.append(figure);}});}
- [...pages.children].forEach((p,i)=>p.querySelector('.number').textContent=(i+1)+' / '+pages.children.length);document.querySelector('#page-count').textContent=pages.children.length+' صفحة';scale();}
+ [...pages.children].forEach((p,i)=>p.querySelector('.number').textContent=(i+1)+' / '+pages.children.length);document.querySelector('#page-count').textContent=pages.children.length+' صفحة';scale();
+}
 function scale(){const width=document.querySelector('.paper-scroll').clientWidth-16,ratio=Math.min(1,width/794);pages.style.zoom=ratio;}
 function photoList(){const list=document.querySelector('#photo-list');list.replaceChildren();photos.forEach((p,i)=>{const row=el('div','photo-edit'),img=el('img');img.src=p.src;img.alt='صورة '+(i+1);const input=el('input');input.value=p.caption;input.maxLength=200;input.placeholder='وصف الصورة';input.setAttribute('aria-label','وصف الصورة '+(i+1));input.addEventListener('input',()=>{p.caption=input.value;render();});const remove=el('button','','حذف');remove.type='button';remove.setAttribute('aria-label','حذف الصورة '+(i+1));remove.onclick=()=>{photos.splice(i,1);photoList();render();};row.append(img,input,remove);list.append(row);});}
 form.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(render,180);});
