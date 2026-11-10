@@ -51,6 +51,22 @@
 .photo-grid{gap:3mm;margin-top:2mm}.photo-grid figure{padding:1mm}.photo-grid img{height:36mm}.photo-grid figcaption{font-size:9pt;line-height:1.2}.doc-heading{font-size:13pt;margin:0 0 3mm}
 @media print{.page{border:0!important;width:210mm!important;height:297mm!important;zoom:1!important}.page:before,.report-title,.author-banner,.principal-banner,.side-rail,.decoration,.corner{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 .rail-two{background:#ffd966}
+
+/* Match the DOCX cell grid directly; keep labels out of narrow word-by-word wraps. */
+.report-table{direction:rtl;width:169.8449mm;table-layout:fixed;border:.5pt solid #000;border-spacing:0}
+.report-table td{box-sizing:border-box;border:.5pt solid #000;padding:1mm 1.5mm;line-height:1.2}
+.report-table strong{display:inline;font-weight:400}
+.program-row td{height:8.5mm;padding:1mm 1.5mm;font-size:14pt}
+.goal-row td{height:8.5mm;padding:1mm 1.5mm}
+.details-row td{height:11mm;padding:1mm 1.5mm}
+.domain-row td{height:16.775mm;padding:1mm;vertical-align:middle}
+.domain-row td:nth-child(2){font-size:9pt;line-height:1.4}
+.domain-row .field-label{font-size:10pt;line-height:1.2;word-break:normal;overflow-wrap:normal}
+.date-row td,.audience-row td{height:8.5mm;padding:1mm;vertical-align:middle}
+.date-row .field-label,.audience-row .field-label{font-size:10pt;white-space:nowrap;overflow-wrap:normal}
+.indicator-row td{height:10mm;padding:1mm;vertical-align:middle}
+.indicator-row .field-label{font-size:9.5pt;line-height:1.2;overflow-wrap:normal;word-break:normal}
+.documentation-row td{height:96.695mm;padding:2mm;vertical-align:top}
 </style></head>
 <body>
 <header class="app-head"><div class="brand">تـوثـيـق <span>الابتدائية الثانية بالقاعدة الجوية</span></div><span class="badge">مساحة إعداد التقارير</span></header>
@@ -88,10 +104,10 @@ function render(){
  const d=values();pages.replaceChildren();let body=makePage(),table;
  const fits=()=>body.scrollHeight<=body.clientHeight+1;
  const next=()=>{body=makePage();table=null;};
- function ensureTable(){if(!table){table=el('table','report-table');const cg=el('colgroup');[1421,3544,1984,2680].forEach(w=>{const c=el('col');c.style.width=(w/9629*100)+'%';cg.append(c);});table.append(cg);body.append(table);}}
+ function ensureTable(){if(!table){table=el('table','report-table');table.dir='rtl';const cg=el('colgroup');[1421,3544,1984,2680].forEach(w=>{const c=el('col');c.style.width=(w*25.4/1440)+'mm';cg.append(c);});table.append(cg);body.append(table);}}
  function rowNode(label,text){const tr=el('tr'),td=el('td');td.colSpan=4;td.append(el('strong','',label+' '),document.createTextNode(text||''));tr.append(td);return tr;}
  function putRow(label,text,cls){let remaining=text||' ',continued=false;while(remaining){ensureTable();const row=rowNode(label+(continued?' (تابع)':''),remaining);if(cls)row.className=cls;table.append(row);if(fits())break;row.remove();let lo=0,hi=remaining.length,best=0;while(lo<=hi){const mid=Math.floor((lo+hi)/2),probe=rowNode(label,remaining.slice(0,mid));table.append(probe);const ok=fits();probe.remove();if(ok){best=mid;lo=mid+1;}else hi=mid-1;}if(best<30&&table.rows.length){next();continue;}if(!best)break;let cut=best;const space=remaining.lastIndexOf(' ',best);if(space>best*.7)cut=space;table.append(rowNode(label+(continued?' (تابع)':''),remaining.slice(0,cut)));remaining=remaining.slice(cut).trimStart();continued=true;if(remaining)next();}}
- function fourCells(items,cls){ensureTable();const row=el('tr',cls);items.forEach((s,i)=>{const td=el('td',i%2===0?'field-label':'field-value',s||'');row.append(td);});table.append(row);if(!fits()){row.remove();next();ensureTable();table.append(row);}}
+ function fourCells(items,cls){ensureTable();const row=el('tr',cls);items.forEach((s,i)=>{const td=el('td',i%2===0?'field-label':'field-value',s||'');td.style.width=([1421,3544,1984,2680][i]*25.4/1440)+'mm';row.append(td);});table.append(row);if(!fits()){row.remove();next();ensureTable();table.append(row);if(!fits()){row.remove();putRow(items[0],items[1]);putRow(items[2],items[3]);}}}
  putRow('اسم البرنامج :',d.program,'program-row');putRow('الهدف العام :',d.goal,'goal-row');putRow('الهدف التفصيلي :',d.details,'details-row');
  fourCells(['المجال :',domains.map((x,i)=>(d.domains.includes(x)?'☑ ':'☐ ')+x+(i%2===0?'     ':'\n')).join(''),'آلية وإجراءات التنفيذ',d.steps],'domain-row');
  fourCells(['تاريخ التنفيذ',d.date,'مدة التنفيذ',d.duration],'date-row');fourCells(['الفئة المستهدفة',d.audience,'عدد المستهدفين',d.count],'audience-row');
